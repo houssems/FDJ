@@ -5,4 +5,8 @@ export class TeamModel {
     strStadium: string;
     strStadiumThumb: string;
     strTeam: string;
+    intStadiumCapacity: string;
+    strStadiumLocation: string;
+    strTeamBadge: string;
+    intFormedYear: string;
 }
