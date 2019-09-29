@@ -7,7 +7,7 @@ import { TeamListComponent } from './views/team-list/team-list.component';
 const routes: Routes = [
   {
     path: '',
-    component: PlayerListComponent
+    component: TeamListComponent
   }, {
     path: 'player-list/:id/:name',
     component: PlayerListComponent
