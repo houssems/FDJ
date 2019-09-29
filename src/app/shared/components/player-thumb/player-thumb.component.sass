@@ -1,0 +1,25 @@
+.player
+    position: relative
+    border: 1px solid #ccc
+    overflow: hidden
+    &__details
+        position: absolute
+        bottom: 0
+        width: 100%
+        max-height: 35px
+        transition: max-height 0.3s ease-out
+        &--name
+            background-color: #343a409e
+            padding: 7px 10px
+            color: #fff
+            transition: 0.3s all ease
+        &--info
+            background-color: #ffffff8c
+            padding: 5px
+    &__thumb
+        padding: 0
+        border: none
+        border-radius: 0
+    &:hover
+        .player__details
+            max-height: 200px

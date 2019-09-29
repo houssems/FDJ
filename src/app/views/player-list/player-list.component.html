@@ -1,0 +1,16 @@
+<div class="team__details">
+    <div class="team__details--title">{{team?.strTeam}} <span>{{team?.intFormedYear}}</span></div>
+    <div class="team__details--subtitle">{{team?.strAlternate}}</div>
+</div>
+
+<app-stadium [team]="team"></app-stadium>
+
+<div>
+    <div class="team__background" [style.backgroundImage]="'url('+ team?.strTeamFanart1 +')'"></div>
+
+    <div class="container">
+        <div class="row">
+            <app-player-thumb class="team__players col-12 col-md-4" *ngFor="let player of players" [player]="player"></app-player-thumb>
+        </div>
+    </div>
+</div>
