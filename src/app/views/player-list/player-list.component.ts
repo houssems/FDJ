@@ -4,6 +4,7 @@ import { map } from 'rxjs/operators';
 import { PlayerModel } from 'src/app/shared/models/player.model';
 import { TeamModel } from 'src/app/shared/models/team.model';
 import { ActivatedRoute } from '@angular/router';
+import { ThesportsdbApiService } from 'src/app/shared/services/api/thesportsdb-api.service';
 
 @Component({
   selector: 'app-player-list',
@@ -15,7 +16,7 @@ export class PlayerListComponent implements OnInit {
   public players: PlayerModel[] = [];
   public team: TeamModel;
 
-  constructor(private baseApi: BaseApiService, private route: ActivatedRoute) {
+  constructor(private thesportsdbApiService: ThesportsdbApiService, private route: ActivatedRoute) {
   }
 
   ngOnInit() {
@@ -25,14 +26,8 @@ export class PlayerListComponent implements OnInit {
   }
 
   private getTeamDetails(id: string, name: string) {
-    this.baseApi.get(`https://www.thesportsdb.com/api/v1/json/1/lookupteam.php?id=${id}`)
-      .pipe(map(({ teams }) => teams[0]))
-      .subscribe(team => this.team = team)
-
-    this.baseApi
-      .get(`https://www.thesportsdb.com/api/v1/json/1/searchplayers.php?t=${name}`)
-      .pipe(map(({ player }) => player))
-      .subscribe(players => this.players = players);
+    this.thesportsdbApiService.getTeam(id).subscribe(team => this.team = team);
+    this.thesportsdbApiService.getPlayersByTeam(name).subscribe(players => this.players = players);
   }
 
 }

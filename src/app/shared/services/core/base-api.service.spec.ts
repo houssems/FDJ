@@ -2,7 +2,7 @@ import { TestBed } from '@angular/core/testing';
 
 import { BaseApiService } from './base-api.service';
 
-describe('BaseApiService', () => {
+xdescribe('BaseApiService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {

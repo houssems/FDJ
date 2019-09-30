@@ -1,11 +1,11 @@
 <div class="player">
     <div class="player__details">
-        <div class="player__details--name">{{player.strPlayer}}</div>
+        <div class="player__details--name">{{player?.strPlayer}}</div>
         <div class="player__details--info">
             <div>{{player?.strPosition}}</div>
             <div>{{player?.dateBorn}}</div>
             <div>{{player?.strSigning}}</div>
         </div>
     </div>
-    <img class="player__thumb img-thumbnail" [src]="player.strThumb"/>
+    <img class="player__thumb img-thumbnail" [src]="player?.strThumb"/>
 </div>

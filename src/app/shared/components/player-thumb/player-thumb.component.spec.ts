@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PlayerThumbComponent } from './player-thumb.component';
+import { Router } from '@angular/router';
 
 describe('PlayerThumbComponent', () => {
   let component: PlayerThumbComponent;
@@ -8,9 +9,9 @@ describe('PlayerThumbComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PlayerThumbComponent ]
+      declarations: [PlayerThumbComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
