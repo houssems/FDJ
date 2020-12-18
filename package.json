@@ -3,12 +3,12 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "build": "ng build",
-    "test": "ng test",
+    "build": "./node_modules/@angular/cli/bin/ng build",
+    "test": "./node_modules/@angular/cli/bin/ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "start": "node index.js",
-    "postinstall": "ng build --aot --prod"
+    "postinstall": "./node_modules/@angular/cli/bin/ng build --aot --prod"
   },
   "private": true,
   "dependencies": {
